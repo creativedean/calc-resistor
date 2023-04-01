@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc. de Resistencias</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="styles/calor-style.css">
+</head>
+<body onresize="resize">
+    <header class="cabecalho">
+        <nav class="cabecalho-menu">
+            <a class="cabecalho-menu-item" href="index.html">Home</a>
+            <a class="cabecalho-menu-item" href="calc.html">Calc. Resistor</a>
+            <a class="cabecalho-menu-item" href="ohm.html">Lei de Ohm</a>
+            <a class="menu-select" href="color.html">Cores Resistor</a>
+        </nav>
+    </header>
+
+<main class="container">
+    <section class="bands">
+        <div>
+            <label for="ibands" class="band-label">Número de faixas</label>
+            <select nome="Número de faixas" class="bands-select" id="ibands">
+                <option value="" selected="selected"></option>
+                <option value="4">4 - Quatro</option>
+                <option value="5">5 - Cinco</option>
+                <option value="6">6 - Seis</option>
+            </select>
+        </div>
+        <div>
+            <label for="iband-one" class="band-label">Primeira</label>
+            <select nome="Primeira faixa" class="bands-select" id="iband-one">
+                <option value="" selected="selected"></option>
+                <option value="0">Preto</option>
+                <option value="1">Castanho</option>
+                <option value="2">Vermelho</option>
+                <option value="3">Laranja</option>
+                <option value="4">Amarelo</option>
+                <option value="5">Verde</option>
+                <option value="6">Azul</option>
+                <option value="7">Roxo</option>
+                <option value="8">Cinza</option>
+                <option value="9">Branco</option>
+            </select>
+        </div>
+        <div>
+            <label for="iband-two" class="band-label">Segunda</label>
+            <select nome="Segunda faixa" class="bands-select" id="iband-two">
+                <option value="" selected="selected"></option>
+                <option value="0">Preto</option>
+                <option value="1">Castanho</option>
+                <option value="2">Vermelho</option>
+                <option value="3">Laranja</option>
+                <option value="4">Amarelo</option>
+                <option value="5">Verde</option>
+                <option value="6">Azul</option>
+                <option value="7">Roxo</option>
+                <option value="8">Cinza</option>
+                <option value="9">Branco</option>
+            </select>
+        </div>
+        <div>
+            <label for="iband-three" class="band-label">Terceira</label>
+            <select nome="Terceira faixa" class="bands-select" id="iband-three">
+                <option value="" selected="selected"></option>
+                <option value="0">Preto</option>
+                <option value="1">Castanho</option>
+                <option value="2">Vermelho</option>
+                <option value="3">Laranja</option>
+                <option value="4">Amarelo</option>
+                <option value="5">Verde</option>
+                <option value="6">Azul</option>
+                <option value="7">Roxo</option>
+                <option value="8">Cinza</option>
+                <option value="9">Branco</option>
+            </select>
+        </div>
+        <div>
+            <label for="iband-for" class="band-label">Quarta</label>
+            <select nome="Quarta faixa" class="bands-select" id="iband-for">
+                <option value="" selected="selected"></option>
+                <option value="1">Preto</option>
+                <option value="10">Castanho</option>
+                <option value="100">Vermelho</option>
+                <option value="1000">Laranja</option>
+                <option value="10000">Amarelo</option>
+                <option value="100000">Verde</option>
+                <option value="1000000">Azul</option>
+                <option value="10000000">Roxo</option>
+                <option value="0.1">Dourado</option>
+                <option value="0.01">Prateado</option>
+            </select>
+        </div>
+        <div>
+            <label for="iband-five" class="band-label">Quinta</label>
+            <select nome="Quinta faixa" class="bands-select" id="iband-five">
+                <option value="" selected="selected"></option>
+                <option value="0.01">Castanho</option>
+                <option value="0.02">Vermelho</option>
+                <option value="0.005">Verde</option>
+                <option value="0.0025">Azul</option>
+                <option value="0.0010">Roxo</option>
+                <option value="0.0005">Cinza</option>
+                <option value="0.05">Dourado</option>
+                <option value="0.1">Prateado</option>
+            </select>
+        </div>
+        <div>
+              <label for="iband-six" class="band-label">Sexta</label>
+              <select nome="Sexta faixa" class="bands-select" id="iband-six">
+                <option value="" selected="selected"></option>
+                <option value="100">Castanho</option>
+                <option value="15">Laranja</option>
+                <option value="25">Amarelo</option>
+              </select>
+            </div>
+        </section>
+        <section class="result">
+            <img
+              src="imagens/resistor.svg"
+              alt="Ilustração resistencia"
+              class="resistor-img"
+              id="iresistor-img"
+            />
+        <div class="bands-result">
+              <label for="ibands-total"></label>
+              <input
+                type="number"
+                nome="Número de faixas"
+                class="bands-total"
+                id="ibands-total"
+                value=""
+                placeholder=""
+                disabled=""
+              />
+        </div>
+        </section>
+    <footer class="rodape">
+        <p class="copyright">2023 © Jean Oliveira</p>
+        <div class="rodape-img">
+            <img class="rodape-behance" src="imagens/behance-light.svg">
+            <img class="rodape-github" src="imagens/github-light.svg">
+            <img class="rodape-email" src="imagens/email-light.svg">
+        </div>
+    </footer>
+</body>
+</html>
+
+
